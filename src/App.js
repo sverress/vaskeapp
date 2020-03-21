@@ -17,16 +17,6 @@ const App = () => (
   <StylesProvider injectFirst>
     <MuiThemeProvider theme={theme}>
       <Router>
-        <AppBar position="static">
-          <Toolbar>
-            <Button to="/recipies" component={Link}>
-              Oppskrifter
-            </Button>
-            <Button to="/washlist" component={Link}>
-              Hvem vasker?
-            </Button>
-          </Toolbar>
-        </AppBar>
         <DashboardContainter>
           <Switch>
             <Route path="/recipies">
