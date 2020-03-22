@@ -5,9 +5,8 @@ import { StylesProvider } from "@material-ui/core/styles";
 import { Toolbar, Button, AppBar } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+import { routes } from "./routeConfig";
 import theme from "./theme";
-import RecipieContainer from "./Containers/RecipiesContainer/RecipieContainer";
-import WashlistContainer from "./Containers/WashlistContainer/WashlistContainer";
 
 const DashboardContainter = styled.div`
   margin: 5%;
@@ -29,15 +28,15 @@ const App = () => (
         </AppBar>
         <DashboardContainter>
           <Switch>
-            <Route path="/recipies">
-              <RecipieContainer />
-            </Route>
-            <Route path="/washlist">
-              <WashlistContainer />
-            </Route>
-            <Route path="/">
-              <WashlistContainer />
-            </Route>
+            {routes.map(route => (
+              <Route
+                path={route.path}
+                exact={route.exact}
+                render={props => (
+                  <route.component {...props} routes={route.routes} />
+                )}
+              />
+            ))}
           </Switch>
         </DashboardContainter>
       </Router>

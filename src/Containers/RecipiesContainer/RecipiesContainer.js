@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import RecipieCard from "./RecipieCard";
 import { recipies } from "../../data";
 
-const RecipieContainer = () => (
+const RecipiesContainer = () => (
   <Grid container spacing={2}>
     {recipies.map(recipie => (
       <RecipieCard recipie={recipie} />
@@ -11,4 +11,4 @@ const RecipieContainer = () => (
   </Grid>
 );
 
-export default RecipieContainer;
+export default RecipiesContainer;
