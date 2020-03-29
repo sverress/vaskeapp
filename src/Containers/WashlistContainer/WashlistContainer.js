@@ -41,7 +41,9 @@ const TextBox = styled(Grid)`
   margin: ${props => (props.margin ? props.margin : 0)}px;
 `;
 
-const currentWeek = moment().week();
+const currentWeek = moment()
+  .startOf("isoWeek")
+  .week();
 
 const WashlistContainer = () => {
   const [week, setWeek] = useState(currentWeek);
