@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import { StylesProvider } from "@material-ui/core/styles";
-import { Toolbar, Button, AppBar } from "@material-ui/core";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import theme from "./theme";
 import RecipieContainer from "./Containers/RecipiesContainer/RecipieContainer";
