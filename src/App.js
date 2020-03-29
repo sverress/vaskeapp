@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import theme from "./theme";
 import RecipieContainer from "./Containers/RecipiesContainer/RecipieContainer";
 import WashlistContainer from "./Containers/WashlistContainer/WashlistContainer";
+import JeopardyContainer from "./Containers/JeopardyContainer/JeopardyContainer";
 
 const DashboardContainter = styled.div`
   margin: 5%;
@@ -23,6 +24,9 @@ const App = () => (
             </Route>
             <Route path="/washlist">
               <WashlistContainer />
+            </Route>
+            <Route path="/jeopardy">
+              <JeopardyContainer />
             </Route>
             <Route path="/">
               <WashlistContainer />
