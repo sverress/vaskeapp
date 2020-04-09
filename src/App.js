@@ -8,6 +8,7 @@ import theme from "./theme";
 import RecipieContainer from "./Containers/RecipiesContainer/RecipieContainer";
 import WashlistContainer from "./Containers/WashlistContainer/WashlistContainer";
 import JeopardyContainer from "./Containers/JeopardyContainer/JeopardyContainer";
+import MathContainer from "./Containers/MathContainer/MathContainer";
 
 const DashboardContainter = styled.div`
   margin: 5%;
@@ -19,6 +20,9 @@ const App = () => (
       <Router>
         <DashboardContainter>
           <Switch>
+            <Route path="/math">
+              <MathContainer />
+            </Route>
             <Route path="/recipies">
               <RecipieContainer />
             </Route>
