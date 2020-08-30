@@ -49,18 +49,18 @@ const WashlistContainer = () => {
   const [week, setWeek] = useState(currentWeek);
 
   const getKitchen = () => {
-    return ["Harald", "Sverre", "Alex", "Tor"][week % 4];
+    return ["Jonas", "Sverre", "Oskar", "Tor"][week % 4];
   };
 
   const getHallway = () => {
-    return ["Alex", "Tor", "Harald", "Sverre"][week % 4];
+    return ["Oskar", "Tor", "Jonas", "Sverre"][week % 4];
   };
 
   const rooms = [
     {
       title: "Bad",
       icon: <FontAwesomeIcon icon={faToilet} />,
-      resposible: week % 2 ? "Harald" : "Sverre"
+      resposible: week % 2 ? "Jonas" : "Sverre"
     },
     {
       title: "Kjøkken",
@@ -75,7 +75,7 @@ const WashlistContainer = () => {
     {
       title: "Bad",
       icon: <FontAwesomeIcon icon={faToilet} />,
-      resposible: week % 2 ? "Alex" : "Tor"
+      resposible: week % 2 ? "Oskar" : "Tor"
     }
   ];
 
