@@ -3,6 +3,7 @@ import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import { Typography, Button } from "@material-ui/core";
 import * as moment from "moment";
+import setupDatabaseConnection from "../../database";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -91,7 +92,7 @@ const WashlistContainer = () => {
               container
               alignContent="center"
               direction="column"
-              onClick={() => console.log()}
+              onClick={() => setupDatabaseConnection()}
             >
               <TextBox item>
                 <Typography variant="h5">{room.title}</Typography>
