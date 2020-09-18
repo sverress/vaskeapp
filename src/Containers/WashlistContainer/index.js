@@ -1,1 +1,0 @@
-import WashlistContainer from "./WashlistContainer";
